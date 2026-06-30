@@ -1,200 +1,182 @@
-# 馃寣 WSL2 Ubuntu Forge WebNova 路 Lumina Icons
+# &#x1F680; WSL2 Ubuntu Forge WebNova
 
-> 馃И Instalador p贸s-`wsl --install` para transformar um Ubuntu rec茅m-instalado no WSL2 em um ambiente moderno de desenvolvimento, automa莽茫o, Python, Node.js, Docker, Docker Compose, CUDA WSL e NVIDIA Container Toolkit, com painel local **WebNova Lumina Icons**.
+> Instalador premium, visual e seguro para preparar um Ubuntu recem-instalado no WSL2 com ferramentas modernas de desenvolvimento, Python, Node.js, Docker, Docker Compose, CUDA WSL e NVIDIA Container Toolkit.
 
-<p align="center">
-  <img alt="WSL2 Ubuntu" src="https://img.shields.io/badge/WSL2-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
-  <img alt="Bash" src="https://img.shields.io/badge/Bash-Installer-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white">
-  <img alt="WebNova Lumina" src="https://img.shields.io/badge/WebNova-Lumina%20Icons-7C3AED?style=for-the-badge">
-  <img alt="Docker Compose" src="https://img.shields.io/badge/Docker%20Compose-v2-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-  <img alt="CUDA WSL" src="https://img.shields.io/badge/CUDA-WSL-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
-</p>
-
-<p align="center">
-  馃┖ Diagn贸stico 路 馃П Base 路 馃洜锔?Build 路 馃尶 Git/GH 路 馃悕 Python 路 馃煩 Node 路 馃惓 Docker 路 鈿?CUDA 路 鉁?Valida莽茫o 路 馃殌 Instala莽茫o total
-</p>
+![WSL2](https://img.shields.io/badge/WSL2-Ubuntu-5E5CE6?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-WebNova%20TUI-00C2A8?style=for-the-badge&logo=gnubash&logoColor=white)
+![Python](https://img.shields.io/badge/Python-Dev%20Ready-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Compose%20Plugin-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA-WSL%20Toolkit-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 
 ---
 
-## 馃Л Sum谩rio
+## &#x2728; Visao geral
 
-- [鉁?Vis茫o geral](#-vis茫o-geral)
-- [馃拵 Destaques visuais Lumina Icons](#-destaques-visuais-lumina-icons)
-- [馃幆 Para quem 茅 este projeto](#-para-quem-茅-este-projeto)
-- [馃З O que este instalador prepara](#-o-que-este-instalador-prepara)
-- [馃洝锔?Princ铆pios de seguran莽a](#锔?princ铆pios-de-seguran莽a)
-- [馃寪 Arquitetura WebNova](#-arquitetura-webnova)
-- [馃搵 Requisitos](#-requisitos)
-- [鈿?Instala莽茫o r谩pida](#-instala莽茫o-r谩pida)
-- [馃枼锔?Uso pelo painel WebNova](#锔?uso-pelo-painel-webnova)
-- [鈱笍 Uso pela CLI](#锔?uso-pela-cli)
-- [馃И Dry-run global](#-dry-run-global)
-- [馃梻锔?Cat谩logo de a莽玫es com 铆cones](#锔?cat谩logo-de-a莽玫es-com-铆cones)
-- [馃П Perfis de instala莽茫o](#-perfis-de-instala莽茫o)
-- [馃悕 Python stack](#-python-stack)
-- [馃煩 Node.js stack](#-nodejs-stack)
-- [馃惓 Docker e Docker Compose](#-docker-e-docker-compose)
-- [鈿?CUDA WSL e NVIDIA Container Toolkit](#-cuda-wsl-e-nvidia-container-toolkit)
-- [鉁?Valida莽茫o p贸s-instala莽茫o](#-valida莽茫o-p贸s-instala莽茫o)
-- [馃Н Troubleshooting](#-troubleshooting)
-- [馃К Vari谩veis de ambiente](#-vari谩veis-de-ambiente)
-- [馃搧 Estrutura recomendada do reposit贸rio](#-estrutura-recomendada-do-reposit贸rio)
-- [馃И Checklist de qualidade](#-checklist-de-qualidade)
-- [馃毀 Roadmap sugerido](#-roadmap-sugerido)
-- [馃摎 Refer锚ncias oficiais recomendadas](#-refer锚ncias-oficiais-recomendadas)
-- [馃摐 Licen莽a](#-licen莽a)
+O **WSL2 Ubuntu Forge WebNova** e um script Bash com painel Web local para preparar uma distribuicao Ubuntu instalada via `wsl --install`.
+
+Ele foi criado para transformar um Ubuntu limpo em um ambiente profissional para:
+
+- &#x1F9F1; desenvolvimento base no WSL2;
+- &#x1F4BB; terminal moderno e ferramentas de produtividade;
+- &#x1F527; compilacao e build tools;
+- &#x1F4E6; Git, GitHub CLI e fluxo de repositorio;
+- &#x1F40D; Python moderno;
+- &#x1F7E2; Node.js moderno;
+- &#x1F433; Docker Engine com Docker Compose Plugin;
+- &#x26A1; CUDA Toolkit para WSL-Ubuntu;
+- &#x1F9EC; NVIDIA Container Toolkit;
+- &#x1F50D; validacao geral do ambiente.
+
+> **Nota importante de codificacao:** este README foi escrito em formato **ASCII-safe**. Os acentos e emojis foram representados com entidades HTML, como `&oacute;` e `&#x1F680;`, para evitar erros como `mojibake` ou caracteres quebrados em editores que abrem arquivos com codificacao errada.
 
 ---
 
-## 鉁?Vis茫o geral
+## &#x1F4DA; Sumario
 
-**WSL2 Ubuntu Forge WebNova** 茅 um instalador visual para preparar um Ubuntu rec茅m-instalado com `wsl --install`.
-
-A vers茫o **Lumina Icons** deixa o painel mais bonito, escane谩vel e agrad谩vel de usar, com 铆cones na sidebar, nos cards, nos bot玫es, nos status e nos riscos de execu莽茫o.
-
-```text
-馃尡 Ubuntu rec茅m-instalado no WSL2
-        鈹?        鈻?馃寣 WebNova Lumina Icons
-        鈹?        鈹溾攢鈹€ 馃П Base Linux atualizada
-        鈹溾攢鈹€ 鈱笍 Terminal premium
-        鈹溾攢鈹€ 馃洜锔?Build tools
-        鈹溾攢鈹€ 馃尶 Git, SSH e GitHub CLI
-        鈹溾攢鈹€ 馃悕 Python moderno
-        鈹溾攢鈹€ 馃煩 Node.js moderno
-        鈹溾攢鈹€ 馃惓 Docker Engine
-        鈹溾攢鈹€ 馃З Docker Compose Plugin
-        鈹溾攢鈹€ 鈿?CUDA Toolkit para WSL-Ubuntu
-        鈹溾攢鈹€ 馃К NVIDIA Container Toolkit
-        鈹斺攢鈹€ 鉁?Valida莽茫o final
-```
-
-O objetivo 茅 simples: transformar a instala莽茫o crua do Ubuntu em um ambiente pronto para desenvolvimento real, sem decorar dezenas de comandos e sem perder transpar锚ncia sobre o que est谩 sendo executado.
+- [&#x2728; Visao geral](#-visao-geral)
+- [&#x1F3AF; Objetivo do projeto](#-objetivo-do-projeto)
+- [&#x1F5BC; WebNova Lumina Icons](#-webnova-lumina-icons)
+- [&#x1F9ED; Catalogo de acoes](#-catalogo-de-acoes)
+- [&#x2699; Requisitos](#-requisitos)
+- [&#x1F680; Instalacao rapida](#-instalacao-rapida)
+- [&#x1F310; Uso pelo painel WebNova](#-uso-pelo-painel-webnova)
+- [&#x2328; Uso via CLI](#-uso-via-cli)
+- [&#x1F6E1; Dry-run global](#-dry-run-global)
+- [&#x1F40D; Stack Python](#-stack-python)
+- [&#x1F7E2; Stack Nodejs](#-stack-nodejs)
+- [&#x1F433; Docker e Docker Compose](#-docker-e-docker-compose)
+- [&#x26A1; CUDA WSL e NVIDIA Container Toolkit](#-cuda-wsl-e-nvidia-container-toolkit)
+- [&#x2705; Validacao](#-validacao)
+- [&#x1F6E0; Troubleshooting](#-troubleshooting)
+- [&#x1F512; Seguranca operacional](#-seguranca-operacional)
+- [&#x1F5FA; Roadmap sugerido](#-roadmap-sugerido)
 
 ---
 
-## 馃拵 Destaques visuais Lumina Icons
+## &#x1F3AF; Objetivo do projeto
 
-A vers茫o **v1.1.0-lumina-icons** acrescenta a camada visual que faltava no painel:
-
-| 脕rea | Melhoria visual |
-|---|---|
-| 馃Л Sidebar | 脥cones por grupo e por a莽茫o |
-| 馃儚 Cards | 脥cones individuais, orb visual, risco e descri莽茫o clara |
-| 馃И Status | Indicadores visuais para ambiente, Docker, GPU, Python e Node |
-| 馃洝锔?Riscos | Badges `馃煝 Seguro`, `馃煛 Altera`, `馃敶 Pesado` |
-| 馃柋锔?Bot玫es | 脥cones em a莽玫es principais e execu莽茫o total |
-| 馃攷 Busca | Campo de busca mais leg铆vel e iconizado |
-| 馃 Visual | Glassmorphism leve, cards compactos e contraste dark-first |
-| 馃摫 Responsivo | Grid adapt谩vel para desktop, tablet e mobile |
-| 馃Ь Console | Streaming real com leitura mais clara |
-| 馃殌 Modal | Instala莽茫o completa com confirma莽茫o visual |
-
----
-
-## 馃幆 Para quem 茅 este projeto
-
-Este projeto 茅 para voc锚 se precisa de um Ubuntu WSL2 pronto para:
-
-- 馃悕 desenvolvimento Python;
-- 馃寪 backend/API;
-- 馃搳 dados e notebooks;
-- 馃 IA/LLM;
-- 馃煩 Node.js e tooling web;
-- 馃惓 Docker e Docker Compose;
-- 鈿?CUDA no WSL2;
-- 馃И valida莽茫o p贸s-instala莽茫o;
-- 馃О ambiente produtivo sem montar tudo manualmente.
-
-Este projeto **n茫o** 茅 para:
-
-- 鉂?Linux bare metal fora do WSL2;
-- 鉂?distros sem `apt`;
-- 鉂?instalar driver NVIDIA Linux dentro do WSL;
-- 鉂?ambientes cr铆ticos sem dry-run;
-- 鉂?execu莽茫o cega sem revisar as a莽玫es.
-
----
-
-## 馃З O que este instalador prepara
-
-O script atual possui **917 linhas** e um cat谩logo com **15 a莽玫es reais**.
-
-| Camada | Componentes |
-|---|---|
-| 馃┖ Diagn贸stico | WSL2, Ubuntu, disco, mem贸ria, Docker, GPU, Python, Node e rede |
-| 馃П Base | APT, certificados, `curl`, `wget`, `gnupg`, locales e utilit谩rios essenciais |
-| 鈱笍 Terminal | `jq`, `yq`, `tree`, `htop`, `btop`, `ncdu`, `tmux`, `fzf`, `ripgrep`, `fd`, `bat` |
-| 馃洜锔?Build | `build-essential`, `gcc`, `g++`, `cmake`, `ninja`, `autoconf`, `automake`, `libtool` |
-| 馃尶 Git | Git, Git LFS, OpenSSH e GitHub CLI |
-| 馃悕 Python Core | Python 3, pip, venv, dev headers, pipx, setuptools, wheel e build |
-| 鉁?Python Modern | uv, ruff, pytest, mypy, pyright, pre-commit, nox, tox, pip-audit |
-| 馃寪 Python Backend | FastAPI, Uvicorn, Pydantic, SQLAlchemy, Alembic, Psycopg, Redis, Celery, HTTPX |
-| 馃搳 Python Data | JupyterLab, NumPy, Pandas, Polars, PyArrow, SciPy, Matplotlib, DuckDB, scikit-learn |
-| 馃 Python IA | Transformers, Accelerate, Datasets, Sentence Transformers, LangChain, LlamaIndex, ChromaDB, ONNX Runtime |
-| 馃煩 Node | Node/npm, Corepack, PNPM, Yarn, npm-check-updates, TypeScript |
-| 馃惓 Docker | Docker Engine, Docker CLI, containerd, Buildx, Docker Compose Plugin |
-| 馃З Compose | `docker compose` e wrapper compat铆vel `docker-compose` |
-| 鈿?CUDA | CUDA Toolkit 13.0 para WSL-Ubuntu |
-| 馃К NVIDIA | NVIDIA Container Toolkit e runtime Docker via `nvidia-ctk` |
-
----
-
-## 馃洝锔?Princ铆pios de seguran莽a
-
-O instalador foi desenhado com estes princ铆pios:
-
-- 鉁?execu莽茫o real, sem simula莽茫o por padr茫o;
-- 馃И dry-run global para revisar comandos antes de aplicar;
-- 馃毇 sem `eval`;
-- 馃毇 sem hardcode de usu谩rio;
-- 馃毇 sem placeholders;
-- 馃毇 sem mexer em GRUB/kernel;
-- 馃毇 sem instalar driver NVIDIA Linux dentro do WSL2;
-- 馃敀 servidor local limitado a `127.0.0.1`;
-- 馃Ь stdout/stderr em streaming no console WebNova;
-- 馃 APT em modo n茫o interativo;
-- 馃З a莽玫es separadas por perfil;
-- 鉁?valida莽茫o p贸s-instala莽茫o.
-
----
-
-## 馃寪 Arquitetura WebNova
-
-```text
-鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹?馃獰 Navegador no Windows                                      鈹?鈹?http://127.0.0.1:8797/?token=...                             鈹?鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?                                鈹?                                鈻?鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹?馃寣 WebNova Lumina UI                                          鈹?鈹?鈹溾攢鈹€ 馃Л Sidebar iconizada                                      鈹?鈹?鈹溾攢鈹€ 馃儚 Cards compactos                                        鈹?鈹?鈹溾攢鈹€ 馃И Dry-run visual                                         鈹?鈹?鈹溾攢鈹€ 馃Ь Console real em streaming                              鈹?鈹?鈹斺攢鈹€ 馃殌 Modal de instala莽茫o completa                           鈹?鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?                                鈹?                                鈻?鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹?馃悕 Servidor local Python                                      鈹?鈹?鈹溾攢鈹€ /api/actions                                              鈹?鈹?鈹溾攢鈹€ /api/status                                               鈹?鈹?鈹斺攢鈹€ /api/run-stream                                           鈹?鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?                                鈹?                                鈻?鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹?馃悮 Bash Dispatcher                                            鈹?鈹?鈹溾攢鈹€ cat谩logo 煤nico de a莽玫es                                   鈹?鈹?鈹溾攢鈹€ execu莽茫o real                                             鈹?鈹?鈹溾攢鈹€ dry-run global                                            鈹?鈹?鈹斺攢鈹€ valida莽茫o de stack                                        鈹?鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?```
-
----
-
-## 馃搵 Requisitos
-
-### 馃獰 Windows
-
-- Windows 10 compat铆vel com WSL2 ou Windows 11.
-- WSL instalado.
-- Ubuntu instalado via `wsl --install`.
-- Para CUDA/GPU: driver NVIDIA compat铆vel instalado no Windows.
-
-### 馃惂 Ubuntu no WSL2
-
-- Ubuntu ou derivado compat铆vel com `apt`.
-- Bash.
-- Python 3 para iniciar o painel WebNova.
-- Acesso `sudo`.
-- Internet ativa.
-
-Valide a vers茫o WSL:
+Depois de instalar o Ubuntu com:
 
 ```powershell
+wsl --install
+```
+
+ou:
+
+```powershell
+wsl --install -d Ubuntu
+```
+
+o ambiente ainda precisa de ferramentas essenciais para trabalhar bem com desenvolvimento moderno.
+
+Este projeto centraliza essa preparacao em um painel visual com acoes reais e verificaveis.
+
+Ele nao tenta instalar tudo do mundo. O foco e instalar somente o que foi definido para um ambiente WSL2 Ubuntu profissional:
+
+| Area | Conteudo |
+|---|---|
+| &#x1F9F1; Base | APT, certificados, curl, wget, GPG, locales, timezone e utilitarios essenciais |
+| &#x1F4BB; Terminal | jq, yq, tree, htop, btop, ncdu, tmux, fzf, ripgrep, fd, bat, shellcheck, shfmt |
+| &#x1F527; Build | build-essential, gcc, g++, make, cmake, ninja, pkg-config, autoconf, automake |
+| &#x1F4E6; Git | git, git-lfs, OpenSSH e GitHub CLI |
+| &#x1F40D; Python | python3, pip, venv, dev headers, pipx, uv, ruff, pytest, mypy e stacks opcionais |
+| &#x1F7E2; Node.js | Node.js, npm, Corepack, pnpm e yarn |
+| &#x1F433; Docker | Docker Engine, Buildx e Docker Compose Plugin |
+| &#x26A1; CUDA | CUDA Toolkit 13.0 para WSL-Ubuntu |
+| &#x1F9EC; NVIDIA | NVIDIA Container Toolkit e runtime Docker |
+
+---
+
+## &#x1F5BC; WebNova Lumina Icons
+
+A interface WebNova usa um painel local em `127.0.0.1`, com foco em clareza visual e seguranca.
+
+### &#x2728; Destaques visuais
+
+- &#x1F9ED; sidebar com icones por area;
+- &#x1F5C2; cards iconizados por acao;
+- &#x1F50E; busca rapida no catalogo;
+- &#x1F4CA; cards de status do ambiente;
+- &#x1F5A5; console real com streaming SSE;
+- &#x1F6E1; badge de risco por acao;
+- &#x1F4F1; layout responsivo;
+- &#x1F319; visual dark-first;
+- &#x1F308; detalhes Lumina com gradientes e glassmorphism controlado;
+- &#x1F680; botao de instalacao completa com confirmacao.
+
+### &#x1F4CC; Filosofia visual
+
+A UI foi pensada para ser bonita, mas sem virar carnaval de botao. A prioridade e:
+
+- leitura rapida;
+- contraste adequado;
+- acoes bem separadas;
+- feedback visual claro;
+- console sempre visivel;
+- navegacao simples;
+- responsividade real.
+
+---
+
+## &#x1F9ED; Catalogo de acoes
+
+O script possui **15 acoes reais**.
+
+| ID | Icone | Acao | Descricao |
+|---:|:---:|---|---|
+| 1 | &#x1F4CA; | `status` | Mostra diagnostico rapido do WSL2 Ubuntu |
+| 2 | &#x1F9F1; | `install_base` | Instala base do sistema e utilitarios essenciais |
+| 3 | &#x1F4BB; | `install_terminal` | Instala ferramentas modernas de terminal |
+| 4 | &#x1F527; | `install_build` | Instala compiladores e bibliotecas de build |
+| 5 | &#x1F4E6; | `install_git_gh` | Instala Git, Git LFS, OpenSSH e GitHub CLI |
+| 6 | &#x1F40D; | `install_python_core` | Instala Python essencial |
+| 7 | &#x1F9EA; | `install_python_modern` | Instala ferramentas Python modernas |
+| 8 | &#x1F310; | `install_python_backend` | Instala stack Python para APIs e backend |
+| 9 | &#x1F4CA; | `install_python_data` | Instala stack Python para dados e notebooks |
+| 10 | &#x1F916; | `install_python_ai` | Instala stack Python opcional para IA |
+| 11 | &#x1F7E2; | `install_node` | Instala Node.js, npm, Corepack, pnpm e yarn |
+| 12 | &#x1F433; | `install_docker` | Instala Docker Engine e Docker Compose Plugin |
+| 13 | &#x26A1; | `install_cuda` | Instala CUDA WSL e NVIDIA Container Toolkit |
+| 14 | &#x2705; | `validate_all` | Valida ferramentas instaladas |
+| 15 | &#x1F680; | `install_all` | Executa todas as instalacoes definidas |
+
+---
+
+## &#x2699; Requisitos
+
+### &#x1F5A5; Windows
+
+- Windows 10 com WSL2 atualizado ou Windows 11.
+- WSL instalado.
+- Ubuntu instalado via WSL.
+- Permissao administrativa no Windows para instalar WSL, drivers e Docker Desktop quando necessario.
+
+### &#x1F427; Ubuntu no WSL2
+
+- Ubuntu em modo WSL2.
+- Usuario com `sudo`.
+- Internet ativa.
+- `bash` disponivel.
+- `python3` para o servidor WebNova local.
+
+Validar a distro:
+
+```bash
 wsl.exe -l -v
 ```
 
-A distro deve aparecer como vers茫o `2`.
+Validar dentro do Ubuntu:
+
+```bash
+cat /etc/os-release
+uname -a
+```
 
 ---
 
-## 鈿?Instala莽茫o r谩pida
+## &#x1F680; Instalacao rapida
 
-Dentro do Ubuntu no WSL2:
+Baixe o script e execute:
 
 ```bash
 chmod +x wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
@@ -202,393 +184,222 @@ chmod +x wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
 ./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
 ```
 
-O script exibir谩 uma URL local parecida com:
+O painel exibira uma URL local semelhante a:
 
 ```text
-http://127.0.0.1:8797/?token=...
+http://127.0.0.1:8797/?token=TOKEN_LOCAL
 ```
 
-Abra essa URL no navegador do Windows.
+Copie e cole no navegador do Windows se ele nao abrir automaticamente.
 
 ---
 
-## 馃枼锔?Uso pelo painel WebNova
+## &#x1F310; Uso pelo painel WebNova
 
-No painel voc锚 pode:
+Ao abrir o painel, voce vera:
 
-1. 馃┖ ver o status do ambiente;
-2. 馃攷 procurar a莽玫es pela sidebar;
-3. 馃儚 executar cards individuais;
-4. 馃И ativar dry-run;
-5. 馃Ь acompanhar sa铆da real no console;
-6. 馃殌 executar tudo definido com confirma莽茫o;
-7. 鉁?validar a stack ao final.
+- &#x1F9ED; sidebar com todas as acoes;
+- &#x1F5C2; cards de instalacao;
+- &#x1F4CA; status do ambiente;
+- &#x2328; console real;
+- &#x1F6E1; controle de dry-run;
+- &#x1F680; botao para instalacao completa.
 
-### 馃Л Sidebar iconizada
+Fluxo recomendado:
 
-### 馃┖ Diagn贸stico
-
-- 馃┖ **Status do ambiente**
-  `status` 路 馃煝 Leitura segura
-
-### 馃П Base
-
-- 馃П **Base WSL2 essencial**
-  `install_base` 路 馃煛 Altera ambiente
-- 鈱笍 **Terminal premium**
-  `install_terminal` 路 馃煛 Altera ambiente
-
-### 馃洜锔?Build
-
-- 馃洜锔?**Compiladores e bibliotecas**
-  `install_build` 路 馃煛 Altera ambiente
-
-### 馃尶 Git
-
-- 馃尶 **Git, SSH e GitHub CLI**
-  `install_git_gh` 路 馃煛 Altera ambiente
-
-### 馃悕 Python
-
-- 馃悕 **Python Core**
-  `install_python_core` 路 馃煛 Altera ambiente
-- 鉁?**Python Modern Tools**
-  `install_python_modern` 路 馃煛 Altera ambiente
-- 馃寪 **Python Backend Lab**
-  `install_python_backend` 路 馃煛 Altera ambiente
-- 馃搳 **Python Data/Notebook Lab**
-  `install_python_data` 路 馃煛 Altera ambiente
-- 馃 **Python IA/LLM Lab**
-  `install_python_ai` 路 馃敶 Pesado / avan莽ado
-
-### 馃煩 Node
-
-- 馃煩 **Node.js moderno**
-  `install_node` 路 馃煛 Altera ambiente
-
-### 馃惓 Docker
-
-- 馃惓 **Docker Engine + Compose**
-  `install_docker` 路 馃煛 Altera ambiente
-
-### 鈿?GPU/CUDA
-
-- 鈿?**CUDA WSL + NVIDIA Container Toolkit**
-  `install_cuda` 路 馃敶 Pesado / avan莽ado
-
-### 鉁?Valida莽茫o
-
-- 鉁?**Validar stack completa**
-  `validate_all` 路 馃煝 Leitura segura
-
-### 馃殌 Execu莽茫o
-
-- 馃殌 **Instalar tudo definido**
-  `install_all` 路 馃敶 Pesado / avan莽ado
-
+1. &#x1F4CA; execute `status`;
+2. &#x1F6E1; ative dry-run se quiser simular comandos;
+3. &#x1F9F1; instale base;
+4. &#x1F527; instale build tools;
+5. &#x1F40D; instale Python;
+6. &#x1F7E2; instale Node.js;
+7. &#x1F433; instale Docker;
+8. &#x26A1; instale CUDA somente se tiver NVIDIA/WSL GPU pronto;
+9. &#x2705; rode `validate_all`.
 
 ---
 
-## 鈱笍 Uso pela CLI
+## &#x2328; Uso via CLI
 
-Listar a莽玫es:
+Listar acoes:
 
 ```bash
 ./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --menu-preview
 ```
 
-Listar a莽玫es em JSON:
+Listar acoes em JSON:
 
 ```bash
 ./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --list-actions-json
 ```
 
-Executar uma a莽茫o espec铆fica:
+Executar uma acao especifica:
 
 ```bash
-./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --run-action install_python_core
+./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --run-action status
 ```
 
-Executar valida莽茫o:
+Executar tudo:
 
 ```bash
-./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --run-action validate_all
+./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --run-action install_all
 ```
 
 ---
 
-## 馃И Dry-run global
+## &#x1F6E1; Dry-run global
 
-Use o dry-run para ver comandos antes de alterar o sistema:
+O dry-run mostra os comandos sem aplicar alteracoes.
+
+Via ambiente:
 
 ```bash
 WEBNOVA_DRY_RUN=1 ./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --run-action install_all
 ```
 
-No painel WebNova, ative o bot茫o **馃И Dry-run** antes de executar a莽玫es.
+No painel WebNova, use o controle visual de dry-run antes de rodar acoes.
 
-O dry-run 茅 especialmente recomendado para:
+### &#x26A0; Importante
 
-- 馃惓 Docker;
-- 鈿?CUDA;
-- 馃 Python IA/LLM;
-- 馃殌 Instalar tudo definido.
+Dry-run nao instala pacotes. Ele serve para revisar o plano de execucao.
 
 ---
 
-## 馃梻锔?Cat谩logo de a莽玫es com 铆cones
+## &#x1F40D; Stack Python
 
-| # | 脥cone | A莽茫o | Grupo | Risco | O que faz |
-|---:|:---:|---|---|---|---|
-| 1 | 馃┖ | `status`<br>Status do ambiente | 馃┖ Diagn贸stico | 馃煝 Leitura segura | Detecta WSL2, Ubuntu, disco, mem贸ria, Docker, GPU, Python, Node e rede. |
-| 2 | 馃П | `install_base`<br>Base WSL2 essencial | 馃П Base | 馃煛 Altera ambiente | Atualiza o sistema e instala certificados, curl, wget, gnupg, locales, compactadores e utilit谩rios b谩sicos. |
-| 3 | 鈱笍 | `install_terminal`<br>Terminal premium | 馃П Base | 馃煛 Altera ambiente | Instala jq, yq, tree, htop, btop, ncdu, tmux, fzf, ripgrep, fd, bat, shellcheck, shfmt e ferramentas de inspe莽茫o. |
-| 4 | 馃洜锔?| `install_build`<br>Compiladores e bibliotecas | 馃洜锔?Build | 馃煛 Altera ambiente | Instala build-essential, pkg-config, gcc/g++, cmake, ninja, autoconf, automake, libtool e headers 煤teis. |
-| 5 | 馃尶 | `install_git_gh`<br>Git, SSH e GitHub CLI | 馃尶 Git | 馃煛 Altera ambiente | Instala Git, Git LFS, OpenSSH e GitHub CLI pelo reposit贸rio oficial. |
-| 6 | 馃悕 | `install_python_core`<br>Python Core | 馃悕 Python | 馃煛 Altera ambiente | Instala python3, pip, venv, dev headers, pipx, setuptools, wheel e build. |
-| 7 | 鉁?| `install_python_modern`<br>Python Modern Tools | 馃悕 Python | 馃煛 Altera ambiente | Instala uv, ruff, pytest, mypy, pyright, pre-commit, nox, tox, pip-audit e ferramentas modernas via pipx. |
-| 8 | 馃寪 | `install_python_backend`<br>Python Backend Lab | 馃悕 Python | 馃煛 Altera ambiente | Cria venv isolada com FastAPI, Uvicorn, Pydantic, SQLAlchemy, Alembic, Psycopg, Redis, Celery e HTTPX. |
-| 9 | 馃搳 | `install_python_data`<br>Python Data/Notebook Lab | 馃悕 Python | 馃煛 Altera ambiente | Cria venv isolada com JupyterLab, ipykernel, NumPy, Pandas, Polars, PyArrow, SciPy, Matplotlib, DuckDB e scikit-learn. |
-| 10 | 馃 | `install_python_ai`<br>Python IA/LLM Lab | 馃悕 Python | 馃敶 Pesado / avan莽ado | Cria venv isolada com Transformers, Accelerate, Datasets, Sentence Transformers, LangChain, LlamaIndex, ChromaDB e ONNX Runtime. |
-| 11 | 馃煩 | `install_node`<br>Node.js moderno | 馃煩 Node | 馃煛 Altera ambiente | Instala Node/npm via apt e ferramentas modernas: Corepack, PNPM, Yarn, npm-check-updates e TypeScript. |
-| 12 | 馃惓 | `install_docker`<br>Docker Engine + Compose | 馃惓 Docker | 馃煛 Altera ambiente | Instala Docker pelo reposit贸rio oficial, Buildx, Docker Compose Plugin e wrapper docker-compose compat铆vel. |
-| 13 | 鈿?| `install_cuda`<br>CUDA WSL + NVIDIA Container Toolkit | 鈿?GPU/CUDA | 馃敶 Pesado / avan莽ado | Instala CUDA Toolkit 13.0 para WSL-Ubuntu e NVIDIA Container Toolkit, preservando a sequ锚ncia operacional do anexo. |
-| 14 | 鉁?| `validate_all`<br>Validar stack completa | 鉁?Valida莽茫o | 馃煝 Leitura segura | Mostra vers玫es e checa Python, Node, Docker Compose, NVIDIA/CUDA e ferramentas principais. |
-| 15 | 馃殌 | `install_all`<br>Instalar tudo definido | 馃殌 Execu莽茫o | 馃敶 Pesado / avan莽ado | Executa base, terminal, build, Git/GH, Python, Node, Docker/Compose e CUDA em sequ锚ncia. |
+### &#x1F9F1; Python core
 
----
+- `python3`
+- `python3-pip`
+- `python3-venv`
+- `python3-dev`
+- `python-is-python3`
+- `pipx`
+- `setuptools`
+- `wheel`
+- `build`
 
-## 馃П Perfis de instala莽茫o
+### &#x1F9EA; Python moderno
 
-### 馃П Base WSL2 essencial
+- `uv`
+- `ruff`
+- `pytest`
+- `pytest-cov`
+- `mypy`
+- `pyright`
+- `pre-commit`
+- `virtualenv`
 
-Instala a funda莽茫o do Ubuntu:
+### &#x1F310; Backend Python
 
-```text
-apt update
-apt full-upgrade
-certificados
-curl / wget / gnupg
-locales / tzdata
-compactadores
-utilit谩rios b谩sicos
-```
+- `fastapi`
+- `uvicorn`
+- `pydantic`
+- `sqlalchemy`
+- `alembic`
+- `psycopg`
+- `asyncpg`
+- `redis`
+- `httpx`
+- `python-dotenv`
 
-### 鈱笍 Terminal premium
+### &#x1F4CA; Dados e notebooks
 
-Ferramentas para produtividade e diagn贸stico:
+- `jupyterlab`
+- `ipykernel`
+- `notebook`
+- `numpy`
+- `pandas`
+- `polars`
+- `pyarrow`
+- `scikit-learn`
+- `duckdb`
+- `matplotlib`
 
-```text
-jq, yq, tree, htop, btop, ncdu, tmux, fzf, ripgrep, fd, bat, shellcheck, shfmt
-```
+### &#x1F916; IA opcional
 
-### 馃洜锔?Build tools
+- `torch`
+- `transformers`
+- `accelerate`
+- `datasets`
+- `sentence-transformers`
+- `onnxruntime`
 
-Necess谩rio para pacotes Python, Node nativo e bibliotecas compiladas:
-
-```text
-build-essential, pkg-config, gcc, g++, cmake, ninja, autoconf, automake, libtool
-```
-
-### 馃尶 Git/GitHub
-
-Instala:
-
-```text
-git
-git-lfs
-openssh-client
-openssh-server
-gh
-```
-
-### 馃悕 Python
-
-Instala Python em camadas:
-
-```text
-Core 鈫?Modern Tools 鈫?Backend Lab 鈫?Data/Notebook Lab 鈫?IA/LLM Lab
-```
-
-### 馃煩 Node
-
-Instala tooling web moderno:
-
-```text
-nodejs
-npm
-corepack
-pnpm
-yarn
-npm-check-updates
-typescript
-```
-
-### 馃惓 Docker
-
-Instala:
-
-```text
-docker-ce
-docker-ce-cli
-containerd.io
-docker-buildx-plugin
-docker-compose-plugin
-```
-
-### 鈿?CUDA
-
-Instala CUDA Toolkit 13.0 para WSL-Ubuntu e NVIDIA Container Toolkit.
+> O perfil de IA e opcional porque pacotes como `torch` podem ser grandes e dependem do objetivo do ambiente.
 
 ---
 
-## 馃悕 Python stack
+## &#x1F7E2; Stack Nodejs
 
-### 馃悕 Python Core
+O script instala uma base Node.js moderna:
 
-```text
-python3
-python3-pip
-python3-venv
-python3-dev
-python-is-python3
-pipx
-setuptools
-wheel
-build
-```
+- `nodejs`
+- `npm`
+- `corepack`
+- `pnpm`
+- `yarn`
 
-### 鉁?Python Modern Tools
-
-```text
-uv
-ruff
-pytest
-pytest-cov
-mypy
-pyright
-pre-commit
-nox
-tox
-pip-audit
-```
-
-### 馃寪 Python Backend Lab
-
-Venv isolada para backend:
-
-```text
-fastapi
-uvicorn
-pydantic
-sqlalchemy
-alembic
-psycopg
-redis
-celery
-httpx
-python-dotenv
-```
-
-### 馃搳 Python Data/Notebook Lab
-
-Venv isolada para dados e notebooks:
-
-```text
-jupyterlab
-ipykernel
-numpy
-pandas
-polars
-pyarrow
-scipy
-matplotlib
-duckdb
-scikit-learn
-```
-
-### 馃 Python IA/LLM Lab
-
-Venv isolada para IA e LLM:
-
-```text
-transformers
-accelerate
-datasets
-sentence-transformers
-langchain
-llama-index
-chromadb
-onnxruntime
-```
-
-> 鈿狅笍 Esta etapa pode ser pesada. Use dry-run primeiro.
-
----
-
-## 馃煩 Node.js stack
-
-O instalador prepara Node.js com ferramentas 煤teis para projetos modernos:
-
-```text
-nodejs
-npm
-corepack
-pnpm
-yarn
-npm-check-updates
-typescript
-```
-
-Valida莽茫o esperada:
+Validacoes esperadas:
 
 ```bash
 node --version
 npm --version
+corepack --version
 pnpm --version
 yarn --version
-tsc --version
 ```
 
 ---
 
-## 馃惓 Docker e Docker Compose
+## &#x1F433; Docker e Docker Compose
 
-O perfil Docker instala Docker Engine e Compose Plugin.
+O script instala:
 
-Depois da instala莽茫o, estes comandos devem funcionar:
+- `docker-ce`
+- `docker-ce-cli`
+- `containerd.io`
+- `docker-buildx-plugin`
+- `docker-compose-plugin`
+
+Tambem cria compatibilidade com:
 
 ```bash
-docker version
-docker info
 docker compose version
 docker-compose version
 ```
 
-O wrapper `docker-compose` 茅 criado para compatibilidade com projetos que ainda usam o comando antigo:
+O comando `docker-compose` e implementado como wrapper para o comando moderno:
 
-```text
-/usr/local/bin/docker-compose 鈫?docker compose "$@"
+```bash
+docker compose "$@"
 ```
 
-> 馃惓 Prefer锚ncia moderna: use `docker compose`.
+### &#x1F4CC; Observacao sobre Docker Desktop
+
+Se voce usa Docker Desktop no Windows com integracao WSL2, valide antes de instalar Docker Engine dentro do Ubuntu para evitar conflito de estrategia.
 
 ---
 
-## 鈿?CUDA WSL e NVIDIA Container Toolkit
+## &#x26A1; CUDA WSL e NVIDIA Container Toolkit
 
-A instala莽茫o CUDA preserva a sequ锚ncia operacional definida para WSL-Ubuntu:
+A acao `install_cuda` segue a sequencia do instalador CUDA WSL:
 
-```text
-cuda-wsl-ubuntu.pin
-cuda-repo-wsl-ubuntu-13-0-local_13.0.0-1_amd64.deb
-cuda-toolkit-13-0
-nvidia-container-toolkit
-nvidia-ctk runtime configure --runtime=docker
-restart docker
-```
+1. Remove instalador local antigo, se existir.
+2. Baixa o pin do repositorio CUDA WSL-Ubuntu.
+3. Instala o repositorio local CUDA 13.0.
+4. Copia keyring CUDA.
+5. Executa `apt-get update`.
+6. Instala `cuda-toolkit-13-0`.
+7. Configura repositorio NVIDIA Container Toolkit.
+8. Instala `nvidia-container-toolkit` e dependencias.
+9. Executa `nvidia-ctk runtime configure --runtime=docker`.
+10. Reinicia Docker via `systemctl` ou `service`.
 
-### 鉁?Valida莽玫es esperadas
+### &#x26A0; Importante sobre driver NVIDIA
+
+No WSL2, o driver NVIDIA deve estar instalado no Windows. O script nao instala driver NVIDIA Linux dentro do Ubuntu WSL2.
+
+Validacoes uteis:
 
 ```bash
 nvidia-smi
@@ -597,203 +408,163 @@ nvidia-ctk --version
 docker run --rm --gpus all nvidia/cuda:13.0.0-base-ubuntu24.04 nvidia-smi
 ```
 
-### 鈿狅笍 Importante
-
-No WSL2, o driver NVIDIA deve ficar no **Windows**. N茫o instale driver NVIDIA Linux completo dentro da distro WSL2.
-
 ---
 
-## 鉁?Valida莽茫o p贸s-instala莽茫o
+## &#x2705; Validacao
 
-Execute:
+Rodar self-test:
+
+```bash
+./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --self-test
+```
+
+Rodar validacao geral:
 
 ```bash
 ./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --run-action validate_all
 ```
 
-A valida莽茫o cobre:
+Validacoes importantes:
 
-- 馃惂 WSL2/Ubuntu;
-- 馃悕 Python;
-- 鉁?uv/ruff/pytest/mypy;
-- 馃煩 Node/npm/pnpm/yarn;
-- 馃惓 Docker/Compose;
-- 鈿?NVIDIA/CUDA;
-- 馃尶 Git/GH;
-- 馃О ferramentas principais.
+| Area | Comando |
+|---|---|
+| &#x1F427; WSL2 | `wsl.exe -l -v` |
+| &#x1F4E6; APT | `apt --version` |
+| &#x1F4BB; Terminal | `jq --version` |
+| &#x1F40D; Python | `python3 --version` |
+| &#x1F9EA; uv | `uv --version` |
+| &#x1F7E2; Node | `node --version` |
+| &#x1F433; Docker | `docker version` |
+| &#x1F433; Compose | `docker compose version` |
+| &#x26A1; CUDA | `nvcc --version` |
+| &#x1F9EC; NVIDIA | `nvidia-smi` |
 
 ---
 
-## 馃Н Troubleshooting
+## &#x1F6E0; Troubleshooting
 
-### 鉂?O painel n茫o abre no navegador
+### &#x274C; O painel nao abre
 
-Use a URL impressa no terminal:
-
-```text
-http://127.0.0.1:8797/?token=...
-```
-
-Se a porta estiver ocupada:
+Tente iniciar em uma porta diferente:
 
 ```bash
 WEBNOVA_PORT=8899 ./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
 ```
 
-### 鉂?Permiss茫o sudo expirada
+### &#x274C; Sem permissao sudo
 
-Rode:
+Valide:
 
 ```bash
 sudo -v
 ```
 
-Depois execute a a莽茫o novamente.
+### &#x274C; Docker nao responde
 
-### 鉂?Docker n茫o inicia
-
-Verifique:
+Tente:
 
 ```bash
-systemctl status docker || service docker status
+sudo systemctl restart docker || sudo service docker restart
+sudo docker info
 ```
 
-Em alguns ambientes WSL2, systemd precisa estar habilitado.
+### &#x274C; CUDA nao aparece
 
-### 鉂?`docker-compose` n茫o encontrado
+Valide no Windows:
 
-Valide:
-
-```bash
-docker compose version
-ls -l /usr/local/bin/docker-compose
+```powershell
+nvidia-smi
 ```
 
-### 鉂?`nvidia-smi` n茫o funciona
-
-Verifique no Windows:
-
-- driver NVIDIA instalado;
-- GPU compat铆vel;
-- WSL2 atualizado;
-- Ubuntu rodando em vers茫o 2.
-
-### 鉂?A instala莽茫o IA/LLM demora muito
-
-Normal. O perfil 馃 IA/LLM baixa pacotes grandes. Use dry-run antes e rode quando a rede estiver est谩vel.
-
----
-
-## 馃К Vari谩veis de ambiente
-
-| Vari谩vel | Exemplo | Fun莽茫o |
-|---|---|---|
-| `WEBNOVA_DRY_RUN` | `1` | Ativa dry-run global |
-| `WEBNOVA_PORT` | `8797` | Define porta local do painel |
-| `WEBNOVA_HOST` | `127.0.0.1` | Host local do servidor |
-| `DEBIAN_FRONTEND` | `noninteractive` | Evita prompts APT interativos |
-
-Exemplo:
+Depois valide dentro do WSL2:
 
 ```bash
-WEBNOVA_DRY_RUN=1 WEBNOVA_PORT=8899 ./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
+nvidia-smi
+ls /usr/lib/wsl/lib
+```
+
+### &#x274C; Saida com caracteres quebrados
+
+Use este README ASCII-safe. Ele evita caracteres UTF-8 diretos no arquivo fonte.
+
+Se precisar ajustar terminal:
+
+```bash
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
 ```
 
 ---
 
-## 馃搧 Estrutura recomendada do reposit贸rio
+## &#x1F512; Seguranca operacional
+
+Este projeto evita:
+
+- `eval`;
+- alteracao de GRUB;
+- instalacao de kernel customizado;
+- instalacao de driver NVIDIA Linux dentro do WSL2;
+- exposicao do painel fora de `127.0.0.1`;
+- instalacao silenciosa sem comandos visiveis;
+- execucao remota sem controle local.
+
+Recomendacoes:
+
+- revise o dry-run antes de instalar tudo;
+- execute CUDA somente se tiver GPU NVIDIA pronta no Windows;
+- valide Docker Desktop versus Docker Engine antes de escolher estrategia;
+- evite `sudo pip install`;
+- prefira ambientes virtuais Python por projeto.
+
+---
+
+## &#x1F5FA; Roadmap sugerido
+
+- &#x1F4DD; exportar relatorio temporario sob demanda;
+- &#x1F5C3; historico em memoria por sessao;
+- &#x1F319; tema claro opcional;
+- &#x1F433; pagina dedicada Docker;
+- &#x1F40D; pagina dedicada Python;
+- &#x1F7E2; pagina dedicada Node.js;
+- &#x26A1; pagina dedicada CUDA/GPU;
+- &#x1F9EA; testes automatizados em Ubuntu via GitHub Actions;
+- &#x1F4E6; releases versionadas;
+- &#x1F310; internacionalizacao controlada pelo painel.
+
+---
+
+## &#x1F4C1; Estrutura recomendada do repositorio
 
 ```text
 wsl2-ubuntu-forge-webnova/
-鈹溾攢鈹€ 馃搫 README.md
-鈹溾攢鈹€ 馃悮 wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
-鈹溾攢鈹€ 馃搧 docs/
-鈹?  鈹溾攢鈹€ VALIDATION.md
-鈹?  鈹溾攢鈹€ CUDA_WSL.md
-鈹?  鈹斺攢鈹€ DOCKER.md
-鈹溾攢鈹€ 馃搧 .github/
-鈹?  鈹斺攢鈹€ workflows/
-鈹?      鈹溾攢鈹€ ci.yml
-鈹?      鈹斺攢鈹€ release.yml
-鈹斺攢鈹€ 馃摐 LICENSE
+|-- README.md
+|-- wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
+|-- docs/
+|   `-- VALIDATION.md
+`-- .github/
+    `-- workflows/
+        `-- ci.yml
 ```
 
-> 馃搶 Se ainda n茫o houver licen莽a, n茫o declare uma licen莽a no README como se ela existisse.
+---
+
+## &#x1F9EA; Checklist antes de abrir uma issue
+
+- [ ] Rodei `--self-test`.
+- [ ] Rodei em WSL2 Ubuntu.
+- [ ] Copiei a saida completa do console.
+- [ ] Testei com dry-run.
+- [ ] Confirmei se Docker Desktop esta ou nao em uso.
+- [ ] Confirmei se `nvidia-smi` funciona no Windows antes de instalar CUDA.
 
 ---
 
-## 馃И Checklist de qualidade
+## &#x1F49C; Creditos
 
-Antes de publicar no GitHub:
-
-```bash
-bash -n wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh
-./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --self-test
-./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --menu-preview
-./wsl2-ubuntu-forge-webnova-v1.1-lumina-icons.sh --list-actions-json | python3 -m json.tool
-```
-
-Checklist visual:
-
-- [ ] 馃Л Sidebar com 铆cones.
-- [ ] 馃儚 Cards com 铆cones.
-- [ ] 馃洝锔?Riscos com badges.
-- [ ] 馃Ь Console com streaming.
-- [ ] 馃И Dry-run funcionando.
-- [ ] 馃殌 Modal de instala莽茫o completa.
-- [ ] 馃摫 Layout responsivo.
-- [ ] 鉁?Valida莽茫o final executada.
+Criado para preparar ambientes WSL2 Ubuntu com foco em qualidade, seguranca, visual moderno e execucao verificavel.
 
 ---
 
-## 馃毀 Roadmap sugerido
+## &#x1F4DC; Licenca
 
-Ideias futuras, sem declarar como implementadas:
-
-- 馃И CI automatizado em Ubuntu.
-- 馃摝 Releases versionadas no GitHub.
-- 馃搫 `SECURITY.md`.
-- 馃 `CONTRIBUTING.md`.
-- 馃Ь Relat贸rio export谩vel sob demanda.
-- 馃寳 Tema claro opcional.
-- 馃實 Internacionaliza莽茫o PT-BR/EN.
-- 馃惓 P谩gina dedicada Docker.
-- 馃悕 P谩gina dedicada Python.
-- 馃煩 P谩gina dedicada Node.
-- 鈿?P谩gina dedicada CUDA.
-- 馃搳 M茅tricas antes/depois por perfil.
-
----
-
-## 馃摎 Refer锚ncias oficiais recomendadas
-
-Use estas fontes ao revisar ou evoluir o projeto:
-
-- 馃摌 Microsoft WSL documentation.
-- 馃惂 Ubuntu documentation.
-- 馃惓 Docker Engine for Ubuntu documentation.
-- 馃З Docker Compose documentation.
-- 鈿?NVIDIA CUDA on WSL documentation.
-- 馃К NVIDIA Container Toolkit documentation.
-- 馃悕 Python Packaging User Guide.
-- 鉁?Astral uv and Ruff documentation.
-- 馃尶 GitHub CLI documentation.
-
----
-
-## 馃摐 Licen莽a
-
-Nenhuma licen莽a foi declarada neste README.
-
-Antes de publicar como open source, escolha uma licen莽a e inclua um arquivo `LICENSE` no reposit贸rio.
-
----
-
-## 鉂わ笍 Nota final
-
-**WSL2 Ubuntu Forge WebNova 路 Lumina Icons** foi feito para deixar a primeira hora depois do `wsl --install` muito mais organizada: menos ca莽a a comandos, mais clareza, mais valida莽茫o e um painel bonito o bastante para voc锚 n茫o querer fechar na primeira tela.
-
-```text
-馃獰 Windows + 馃惂 WSL2 + 馃寣 WebNova + 馃悕 Python + 馃惓 Docker + 鈿?CUDA
-= ambiente pronto para construir coisa grande.
-```
+Nenhuma licenca foi definida neste README. Adicione uma `LICENSE` ao repositorio antes de publicar como open source.
